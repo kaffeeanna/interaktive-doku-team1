@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  z-index: 99;
+}
+
+#one {
+  height: 100vh;
+  background-image: url(img/header.png);
+  background-size: cover;
+  padding: 10em;
+  position: relative;
+  color: white;
+  top: 0;
+}
+
+.intro {
+  font-family: "Gill Sans Nova", "Helvetica", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logo-white {
+  margin-left: 18%;
+  margin-top: -60px;
+}
+
+#four {
+  height: 100vh;
+  background-image: url(http://www.placehold.it/1900x1000);
+  background-size: cover;
+  padding: 10em;
+  border-bottom: 1px solid red;
+  position: relative;
+}
+
+#two {
+  height: 100vh;
+  position: relative;
+}
+
+.down {
+  position: absolute;
+  bottom: 2em;
+  line-height: 1em;
+  height: 50px;
+  margin-left: 37%;
+  text-align: center;
+}
+
+.down:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+.left {
+  height: 100vh;
+  width: 87vh;
+  position: relative;
+  float: left;
+  left: 0;
+}
+
+.left img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+.right img {
+  height: 100vh;
+  width: 87vh;
+  position: relative;
+  float: right;
+}
+
+.right img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}

@@ -10605,6 +10605,22 @@ header.masthead .masthead-heading {
   padding-left: 30rem;
 }
 
+.headline-white {
+  color: white;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 50px;
+  font-size: 42px;
+}
+
+.map-small {
+  margin-bottom: 100px;
+}
+
+.icon-2 {
+  margin-left: 20px;
+}
+
 .eigene {
   background-image: url(../assets/img/left-image.png);
   background-size: cover;
@@ -10649,9 +10665,15 @@ header.masthead .masthead-heading {
   height: 800px;
 }
 
-#main {
+#no-skript {
   height: 800px;
 }
+
+.map-full {
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
 .greenbg {
   background-color: #445957;
   height: 800px;

@@ -10605,12 +10605,21 @@ header.masthead .masthead-heading {
   padding-left: 30rem;
 }
 
+@media (max-width: 768px) {
+  .logo-hero {
+    padding-left: 0;
+  }
+  .headline-white {
+    margin-left: 10px;
+  }
+}
+
 .headline-white {
   color: white;
-  text-align: center;
   margin-bottom: 60px;
   margin-top: 50px;
   font-size: 42px;
+  margin-left: 20px;
 }
 
 .map-small {

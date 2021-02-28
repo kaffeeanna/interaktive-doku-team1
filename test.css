@@ -1,0 +1,66 @@
+.map {
+    width: 100vw;
+    height: auto;
+}
+
+/* #map {
+    padding-top: 2%;
+    padding-left: 2%;
+    width: 95vw;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+} */
+
+#gps {
+offset-path: path(var(--path));
+display: flex;
+  width: 50px;
+  height: auto;
+  position: static;
+  z-index: 2;
+  align-self: unset;
+}
+
+
+
+@keyframes path-animation {
+    0% { offset-distance: 75.2%;}
+    100% { offset-distance: 50%;}
+}
+
+@keyframes marker1to2 {
+    0% { offset-distance: 100%;}
+    100% { offset-distance: 72.2%;}
+}
+
+@keyframes marker1to3 {
+    0% { offset-distance: 100%;}
+    100% { offset-distance: 37%;}
+}
+
+
+@keyframes marker2to3 {
+    0% { offset-distance: 72.2%;}
+    100% { offset-distance: 37%;}
+}
+
+@keyframes marker2to4 {
+    0% { offset-distance: 72.2%;}
+    100% { offset-distance: 18%;}
+}
+
+@keyframes marker3to1 {
+    0% { offset-distance: 37%;}
+    100% { offset-distance: 0%;}
+}
+
+@keyframes marker3to4 {
+    0% { offset-distance: 37%;}
+    100% { offset-distance: 18%;}
+}
+
+@keyframes marker4to1 {
+    0% { offset-distance: 18%;}
+    100% { offset-distance: 0%;}
+}

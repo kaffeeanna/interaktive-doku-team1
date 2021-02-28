@@ -1,0 +1,180 @@
+.map {
+    background-color: #445957;
+}
+
+.mapContainer {
+    position: relative;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* text-align: center; */
+    width: 50%;
+    height: auto;
+    margin: 3vh auto 10vh auto
+}
+
+#map {
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    background-color: #445957;
+}
+
+#playBtn {
+    position: relative;
+    width: 200px;
+    height: 50px
+}
+
+#pauseBtn {
+    position: relative;
+    width: 200px;
+    height: 50px
+}
+
+#skip1 {
+    position: relative;
+    width: 200px;
+    height: 50px
+}
+
+#skip2 {
+    position: relative;
+    width: 200px;
+    height: 50px
+}
+
+.map#gps {
+    position: absolute;
+  offset-path: path(var(--path));
+  background-color: unset;
+  z-index: 2;
+}
+
+svg g#Marker1 {
+    cursor: pointer;
+}
+
+.map {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.map#Pfad_25 {
+    pointer-events: all;
+    cursor: pointer;
+}
+.g#marker-map {
+    cursor: pointer;
+    pointer-events: all;
+} 
+
+.map#marker-map:hover {
+    cursor: pointer;
+    pointer-events: all;
+}  
+
+.visualizer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    right: 0;
+    position: absolute;
+    bottom: 20vh;
+    height: 10vh;
+}
+
+.videoPlayer {
+    width: 100%;
+}
+
+.textContainer {
+    display: flex;
+    /* align-items: center; */
+    width: 40%;
+    padding-left: 5vw;
+    flex-flow: wrap;
+    flex-direction: column;
+    position: absolute;
+    height: auto;
+    bottom: -5vh
+
+}
+
+#titleDiv {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+}
+
+#textDiv {
+    position: relative;
+    width: auto;
+    bottom: -20%;
+}
+
+/* button {
+    display: none;
+}
+
+#wavetrack1, #wavetrack2, #wavetrack3, #wavetrack4, #wavetrackintro {
+    display: none;
+} */
+
+@keyframes path-animation {
+    0% { offset-distance: 75.2%;}
+    100% { offset-distance: 50%;}
+}
+
+@keyframes marker1to2 {
+    0% { offset-distance: 100%;}
+    100% { offset-distance: 72.2%;}
+}
+
+@keyframes marker1-1to2 {
+    0% { offset-distance: 92%;}
+    100% { offset-distance: 72.2%;}
+}
+
+@keyframes marker1-2to2 {
+    0% { offset-distance: 76%;}
+    100% { offset-distance: 72.2%;}
+}
+
+@keyframes marker1to3 {
+    0% { offset-distance: 100%;}
+    100% { offset-distance: 37%;}
+}
+
+@keyframes marker2to3 {
+    0% { offset-distance: 72.2%;}
+    100% { offset-distance: 37%;}
+}
+
+@keyframes marker2to4 {
+    0% { offset-distance: 72.2%;}
+    100% { offset-distance: 18%;}
+}
+
+@keyframes marker3to1 {
+    0% { offset-distance: 37%;}
+    100% { offset-distance: 0%;}
+}
+
+@keyframes marker3to4 {
+    0% { offset-distance: 37%;}
+    100% { offset-distance: 18%;}
+}
+
+@keyframes marker4to1 {
+    0% { offset-distance: 18%;}
+    100% { offset-distance: 0%;}
+}
+
+@media screen and (min-width: 2000) {
+    .mapContainer {
+        width: 70%;
+    }
+}

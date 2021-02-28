@@ -70,6 +70,10 @@ section {
   display: block;
 }
 
+footer {
+  background-color: white;
+}
+
 body {
   margin: 0;
   font-family: "Gill Sans Nova", Arial, sans-serif;
@@ -10624,7 +10628,8 @@ header.masthead .masthead-heading {
 }
 
 .map-small {
-  margin-bottom: 100px;
+  margin-bottom: 0;
+  margin-top: 15px;
 }
 
 .icon-2 {

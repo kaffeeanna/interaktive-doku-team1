@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Agency - Start Bootstrap Theme</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="map/style.css" />
+  </head>
+  <body id="page-top">
+    <!-- Masthead-->
+    <header class="masthead">
+      <div class="container">
+        <div class="row">
+          <img class="logo-hero" src="assets/img/logo-white.svg" />
+        </div>
+        <!---<div class="masthead-heading">
+          Erfahre mehr darüber, wer ich bin und wie ich entstanden bin.
+        </div>--->
+        <!--- <div class="row">
+          <a class="js-scroll-trigger" href="#choice"
+            ><img src="assets/img/arrow.png"
+          /></a>
+        </div> -->
+      </div>
+    </header>
+
+    <!--- <div class="container-fluid" id="choice">
+      <div class="row">
+        <div class="col-md-6 eigene">
+          <div class="d-grid gap-2 col-6 mx-auto ownway">
+            <button class="btn-own">Eigene Führung</button>
+          </div>
+        </div>
+        <div class="col-md-6 autoplay">
+          <div class="d-grid gap-2 col-6 mx-auto ownway">
+            <button class="btn-own">Autoplay</button>
+          </div>
+        </div>
+      </div>
+    </div> --->
+
+    <!--- Map Horizontal Slide 1-->
+    <div class="container-fluid" id="no-skript">
+      <div class="row">
+        <div class="col-md-4 greenbg">
+          <div class="row">
+            <div class="col-md-4"><h3 class="headline-white">IDEE</h3></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <img
+                src="assets/img/map-test.png"
+                width="450px"
+                class="map-small"
+              />
+            </div>
+          </div>
+          <div class="textContainer">
+            <p id="titleDiv">awrawrasfasf</p>
+            <p id="textDiv">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+              at, aperiam libero hic qui enim veritatis illo dicta, temporibus
+              facere accusantium ad autem laborum sequi. Fugit cumque illum
+              nihil quas.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-10">
+              <img src="assets/img/skript-icon.png" class="icon-2" />
+            </div>
+            <div class="col-2">
+              <img src="assets/img/pause-icon.svg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="row">
+            <div id="visualizerContainer" class="visualizer">
+              <div class="waveform" id="wavetrack2"></div>
+              <div class="waveform" id="wavetrack3"></div>
+              <div class="waveform" id="wavetrack4"></div>
+              <div class="waveform" id="wavetrackintro"></div>
+              <button id="playBtn">Play</button>
+              <button id="pauseBtn">Pause</button>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <div class="waveform" id="wavetrack1"></div>
+              <div>
+                <button id="skip1">1-1</button>
+                <button id="skip2">1-2</button>
+              </div>
+              <div class="waveform" id="currentWave"></div>
+              <video
+                id="videoPlayer"
+                class="videoPlayer"
+                src="soundvisualizer/final/hiking_animated.mp4"
+                type="video/mp4"
+                controls="false"
+              ></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--- Map Horizontal Slide 1 Ende-->
+    <div id="map-full">
+      <div class="mapContainer">
+        <object
+          class="map"
+          id="map"
+          data="map/map.svg"
+          type="image/svg+xml"
+        ></object>
+        <img id="gps" class="map" src="map/gps.png" />
+      </div>
+    </div>
+    <!--- Map Fullscreen 
+    <div class="container-fluid" id="map">
+      <div class="col-12">
+        <img src="assets/img/map-test.png" class="map-full" />
+      </div>
+    </div>
+   Map Fullscreen Ende -->
+
+    <!-- Footer-->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4 text-lg-left">
+            Anna Antony, Lars Brandies,<br />
+            Lynn Dunkel, Eva Haugrund
+          </div>
+          <div class="col-lg-4 text-lg-right">
+            <a class="mr-3" href="#!">Privacy Policy</a>
+            <a href="#!">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+
+    <script src="node_modules/meanderer/dist/meanderer.js"></script>
+    <script src="map/map.js"></script>
+    <script src="soundvisualizer/waveform.js"></script>
+    <script src="map/scalingpath.js" type="module"></script>
+    <script src="video/video.js"></script>
+    <script src="text/text.js"></script>
+  </body>
+</html>

@@ -1,1 +1,1 @@
-# interaktive-doku-team1
+# Interaktive Doku WS20/21

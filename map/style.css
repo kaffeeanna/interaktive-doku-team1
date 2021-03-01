@@ -88,7 +88,7 @@
   position: absolute;
   offset-path: path(var(--path));
   background-color: unset;
-  top:0;
+  top: 0;
   width: 1vw;
 }
 
@@ -131,8 +131,6 @@ svg g#Marker1 {
   margin-top: 50px;
 }
 
-
-
 .textContainer {
   display: flex;
   /* align-items: center; */
@@ -141,7 +139,7 @@ svg g#Marker1 {
   flex-direction: column;
   bottom: 0;
   width: 30vw;
-  height: 430px;
+  height: 400px;
   line-height: 3em;
   overflow: scroll;
   padding: 5px;
@@ -160,6 +158,14 @@ svg g#Marker1 {
   position: relative;
   width: auto;
   color: white;
+}
+
+.controls {
+  margin-left: 22%;
+}
+
+.waveform {
+  margin-top: 15px;
 }
 
 /* button {

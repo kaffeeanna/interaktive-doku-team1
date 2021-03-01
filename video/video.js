@@ -1,5 +1,6 @@
 const videoPlayer = document.getElementById('videoPlayer')
-
+videoPlayer.controls = false
+videoPlayer.muted = true
 console.log(videoPlayer)
 
 videoPlayer.setVideo = () => {

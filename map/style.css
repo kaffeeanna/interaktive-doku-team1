@@ -25,7 +25,17 @@
   background-color: #445957;
 }
 
-#playBtn {
+/* #playBtn {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  background-image: url(/assets/img/play-icon.svg);
+  background-repeat: no-repeat;
+  background-color: #445957;
+  border: none;
+} */
+
+#playPauseBtn {
   position: relative;
   width: 200px;
   height: 50px;
@@ -35,11 +45,21 @@
   border: none;
 }
 
-#pauseBtn {
+#muteBtn {
   position: relative;
   width: 200px;
   height: 50px;
-  background-image: url(/assets/img/pause-icon.svg);
+  background-image: url(/assets/img/unmute-icon.svg);
+  background-repeat: no-repeat;
+  background-color: #445957;
+  border: none;
+}
+
+#playRateBtn {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  background-image: url(/assets/img/normalRate-icon.svg);
   background-repeat: no-repeat;
   background-color: #445957;
   border: none;
@@ -62,6 +82,14 @@
   offset-path: path(var(--path));
   background-color: unset;
   z-index: 2;
+}
+
+.map-small#gps-small {
+  position: absolute;
+  offset-path: path(var(--path));
+  background-color: unset;
+  top:0;
+  width: 1vw;
 }
 
 svg g#Marker1 {
@@ -103,6 +131,8 @@ svg g#Marker1 {
   margin-top: 50px;
 }
 
+
+
 .textContainer {
   display: flex;
   /* align-items: center; */
@@ -110,7 +140,7 @@ svg g#Marker1 {
   flex-flow: wrap;
   flex-direction: column;
   bottom: 0;
-  width: 400px;
+  width: 30vw;
   height: 430px;
   line-height: 3em;
   overflow: scroll;

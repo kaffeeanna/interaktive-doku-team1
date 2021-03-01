@@ -89,11 +89,13 @@
               <h3 id="titleDiv" class="headline-white">IDEE</h3>
             </div>
             <div class="col-md-2">
-              <img
+              <!-- <img
                 src="assets/img/map-test.png"
                 width="200px"
                 class="map-small"
-              />
+              /> -->
+              <object class="map-small" id="mapSmall" width="200px" data="map/map.svg" type="image/svg+xml"></object>
+              <img id="gps-small" class="map-small" src="map/gps.png" />
               <!--<div class="col-md-9">
               <div class="mapContainer">
                 <object
@@ -120,37 +122,41 @@
           </div>
 
           <div class="row">
-            <div class="col-6">
+            <div class="col-4">
               <img src="assets/img/skript-icon.png" class="icon-2" />
             </div>
-            <div class="col-3">
+            <div class="col-2">
               <!--<img src="assets/img/pause-icon.svg" />-->
-              <button id="playBtn"></button>
+              <button id="playRateBtn"></button>
             </div>
-            <div class="col-3">
+            <div class="col-2">
               <!--<img src="assets/img/pause-icon.svg" />-->
+              <button id="playPauseBtn"></button>
+            </div>
+           <div class="col-2">
+              <!-- <img src="assets/img/pause-icon.svg" /> -->
 
-              <button id="pauseBtn"></button>
-            </div>
+              <button id="muteBtn"></button>
+            </div> 
           </div>
         </div>
 
         <div class="col-md-8">
-          <div class="row">
+          <!-- <div class="row">
             <div id="visualizerContainer" class="visualizer">
               <div class="waveform" id="wavetrack2"></div>
               <div class="waveform" id="wavetrack3"></div>
               <div class="waveform" id="wavetrack4"></div>
               <div class="waveform" id="wavetrackintro"></div>
             </div>
-          </div>
-          <div class="row whitebg">
+          </div> -->
+          <div class="row whitebg" id="visualizerContainer">
             <div>
-              <div class="waveform" id="wavetrack1"></div>
-              <div>
+              <!-- <div class="waveform" id="wavetrack1"></div> -->
+              <!-- <div>
                 <button id="skip1">1-1</button>
                 <button id="skip2">1-2</button>
-              </div>
+              </div> -->
               <div class="waveform" id="currentWave"></div>
               <video
                 id="videoPlayer"
@@ -208,12 +214,11 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script src="https://unpkg.com/wavesurfer.js"></script>
-
     <script src="node_modules/meanderer/dist/meanderer.js"></script>
+    <script src="video/video.js"></script>
     <script src="map/map.js"></script>
     <script src="soundvisualizer/waveform.js"></script>
     <script src="map/scalingpath.js" type="module"></script>
-    <script src="video/video.js"></script>
     <script src="text/text.js"></script>
   </body>
 </html>

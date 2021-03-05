@@ -14,7 +14,7 @@ videoPlayer.setVideo = () => {
       videoPlayer.src = "soundvisualizer/final/idea_animated.mp4";
       break;
     case 3:
-      videoPlayer.src = "soundvisualizer/final/intro_animated.mp4";
+      videoPlayer.src = "soundvisualizer/final/what-is-track.mp4";
       break;
     case 4:
       videoPlayer.src = "soundvisualizer/final/added-value.mp4";

@@ -700,4 +700,5 @@ gps_marker.addEventListener("webkitAnimationEnd", () => {
     visualizer.loadWave()
     videoPlayer.setVideo()
     markerInfo.setInfo()
+    document.getElementById('poi').scrollIntoView({ behavior: 'smooth' })
 })

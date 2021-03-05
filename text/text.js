@@ -30,7 +30,15 @@ m3.text = `Ich bin der digitale Tourguide, der dir das Leben erleichtert.
 
 Stelle dir ganz einfach vor: Es ist wie bei einem Museumsbesuch mit einem Audioguide, den du dir an der Kasse besorgen kannst. Nur, dass du mich nicht kaufen oder mich herumtragen musst. Dein Smartphone hast du eh immer dabei.
 
-Lade dir einfach die App herunter. Getan? Sehr gut. Dann erzähle ich dir jetzt einfach mehr zu mir.`
+Lade dir einfach die App herunter. Getan? Sehr gut. Dann erzähle ich dir jetzt einfach mehr zu mir.
+
+Ich habe Routen gespeichert. In den einzelnen Routen kannst du auch schon nachschauen, was Interessantes auf der Route ist. Aber nicht alles was ich weiß, siehst du auf einen Blick. Mein Wissen ist in einer Datenbank hinterlegt. Sie ist unendlich. Ich habe Dinge gespeichert über interessante Orte, Sehenswürdigkeiten und kleine Geheimnisse, von denen du eventuell noch nie gehört hast. Aber ich teile es gerne mit dir.
+
+Durch mich musst du dir keine Sorgen mehr machen, ob ein Schild lesbar ist oder nicht. Oder wenn überhaupt gar kein Schild vorhanden ist. Ich vergleiche einfach deine Position mit meinem Wissen. Du kannst mich auf Autoplay schalten und ich erzähl dir einfach drauf los, was gerade vor dir ist. Du kannst meine Informationen aber natürlich auch manuell abrufen. Du entscheidest.
+
+Du fragst dich bestimmt, was wäre, wenn du kein Internet hast? Verständlich, diese Frage. Auch im 21. Jahrhundert ist nicht überall Internet in einer ausreichenden Qualität verfügbar. Aber keine Sorge, daran habe ich gedacht! Du planst ja eh meistens deine Route da, wo du WLAN hast oder eine stabile Internetverbindung. Du kannst dir alles vorab downloaden und somit ist alles offline verfügbar. 
+
+Also los geht’s. Starte mich, gehe unbesorgt wandern und sauge das Wissen auf.`
 
 m4.title ="MEHRWERT"
 m4.text = `Erinnerst du dich noch an die Mühle? Du konntest das Schild nicht lesen.

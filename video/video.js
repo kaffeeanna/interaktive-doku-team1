@@ -25,8 +25,10 @@ videoPlayer.setVideo = () => {
 };
 
 logoAnimated.addEventListener('click', () => {
-  logoAnimated.currentTime = 2
-  logoAnimated.play()
+  if (logoAnimated.paused) {
+    logoAnimated.currentTime = 2
+    logoAnimated.play()
+  }
 })
 
 logoAnimated.addEventListener('ended', () => {

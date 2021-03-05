@@ -181,10 +181,10 @@ visualizer.track.on('seek', () => {
     switch (map.currentMarker) {
         case 1:
             if (visualizer.track.isPlaying()) {
-                gps_marker2.style.animation = `marker1to2 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_marker2.style.animation = `marker1to2 ${10 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
                 gps_marker2.style.animationPlayState = 'running'
                 
-                gps_markerSmall.style.animation = `marker1to2 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_markerSmall.style.animation = `marker1to2 ${10 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
                 gps_markerSmall.style.animationPlayState = 'running'
             } else {
                 gps_marker2.style.animationPlayState = 'paused'
@@ -193,10 +193,10 @@ visualizer.track.on('seek', () => {
             break;
         case 2:
             if (visualizer.track.isPlaying()) {
-                gps_marker2.style.animation = `marker2to3 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_marker2.style.animation = `marker2to3 ${10 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
                 gps_marker2.style.animationPlayState = 'running'
                 
-                gps_markerSmall.style.animation = `marker2to3 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_markerSmall.style.animation = `marker2to3 ${10 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
                 gps_markerSmall.style.animationPlayState = 'running'
             } else {
                 gps_marker2.style.animationPlayState = 'paused'
@@ -205,10 +205,10 @@ visualizer.track.on('seek', () => {
             break;
         case 3:
             if (visualizer.track.isPlaying()) {
-                gps_marker2.style.animation = `marker3to4 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_marker2.style.animation = `marker3to4 ${10 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
                 gps_marker2.style.animationPlayState = 'running'
                 
-                gps_markerSmall.style.animation = `marker3to4 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_markerSmall.style.animation = `marker3to4 ${10 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
                 gps_markerSmall.style.animationPlayState = 'running'
             } else {
                 gps_marker2.style.animationPlayState = 'paused'
@@ -217,10 +217,10 @@ visualizer.track.on('seek', () => {
             break;
         case 4:
             if (visualizer.track.isPlaying()) {
-                gps_marker2.style.animation = `marker4to1 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_marker2.style.animation = `marker4to1 ${10 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
                 gps_marker2.style.animationPlayState = 'running'
                 
-                gps_markerSmall.style.animation = `marker4to1 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_markerSmall.style.animation = `marker4to1 ${10 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
                 gps_markerSmall.style.animationPlayState = 'running'
             } else {
                 gps_marker2.style.animationPlayState = 'paused'
@@ -229,3 +229,5 @@ visualizer.track.on('seek', () => {
             break;
     }
 })
+
+visualizer.loadWave()

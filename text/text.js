@@ -45,6 +45,9 @@ Du hast heute eine Menge neuer Dinge erfahren und hast auch großartige Fotos ge
 
 Du siehst die Sonne hinter den Bergen verschwinden, die Vögel verstummen langsam und es wird dunkel.`
 
+markerInfo.header.textContent = m1.title
+markerInfo.text.innerText = m1.text
+
 markerInfo.setInfo = () => {
     switch (map.currentMarker) {
         case 1:

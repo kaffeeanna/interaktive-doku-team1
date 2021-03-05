@@ -18,7 +18,7 @@ playPauseBtn.onclick = () => {
     switch (visualizer.track.isPlaying()){
         case true:
             videoPlayer.play()
-            playPauseBtn.style.backgroundImage = 'url("../assets/img/pause-icon.svg")';
+            playPauseBtn.style.backgroundImage = "url('assets/img/pause-icon.svg')";
             switch (map.currentMarker) {
                 case 1:
                     gps_marker2.style.display = 'block'
@@ -68,7 +68,7 @@ playPauseBtn.onclick = () => {
             break;
         case false:
             videoPlayer.pause()
-            playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
+            playPauseBtn.style.backgroundImage = "url('assets/img/play-icon.svg')";
             switch (map.currentMarker) {
                 case 1:
                     gps_marker2.style.display = 'block'
@@ -101,24 +101,24 @@ playPauseBtn.onclick = () => {
 
 muteBtn.onclick = () => {
    visualizer.track.toggleMute()
-    visualizer.track.getMute() ? muteBtn.style.backgroundImage = 'url("../assets/img/mute-icon.svg")' : muteBtn.style.backgroundImage = 'url("../assets/img/unmute-icon.svg")'
+    visualizer.track.getMute() ? muteBtn.style.backgroundImage = "url('assets/img/mute-icon.svg')" : muteBtn.style.backgroundImage = "url('assets/img/unmute-icon.svg')"
 }
 
 playRateBtn.onclick = () => {
     if (playRateBtn.value == 1){
-        playRateBtn.style.backgroundImage = 'url("../assets/img/fasterRate-icon.svg")'
+        playRateBtn.style.backgroundImage = "url('assets/img/fasterRate-icon.svg')"
         playRateBtn.value = 1.25
     } else if (playRateBtn.value == 1.25){
-        playRateBtn.style.backgroundImage = 'url("../assets/img/fastestRate-icon.svg")'
+        playRateBtn.style.backgroundImage = "url('assets/img/fastestRate-icon.svg')"
         playRateBtn.value = 1.5
     } else if (playRateBtn.value == 1.5) {
-        playRateBtn.style.backgroundImage = 'url("../assets/img/slowestRate-icon.svg")'
+        playRateBtn.style.backgroundImage = "url('assets/img/slowestRate-icon.svg')"
         playRateBtn.value = 0.5
     } else if (playRateBtn.value == 0.5) {
-        playRateBtn.style.backgroundImage = 'url("../assets/img/slowerRate-icon.svg")'
+        playRateBtn.style.backgroundImage = "url('assets/img/slowerRate-icon.svg')"
         playRateBtn.value = 0.75
     } else if (playRateBtn.value == 0.75) {
-        playRateBtn.style.backgroundImage = 'url("../assets/img/normalRate-icon.svg")'
+        playRateBtn.style.backgroundImage = "url('assets/img/normalRate-icon.svg')"
         playRateBtn.value = 1
     }
     visualizer.track.setPlaybackRate(playRateBtn.value)
@@ -140,34 +140,34 @@ visualizer.loadWave = () => {
     switch (map.currentMarker) {
         case 1:
             visualizer.track.load('soundvisualizer/final/hiking_animated.mp4');
-            playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
+            playPauseBtn.style.backgroundImage = "url('assets/img/play-icon.svg')";
             visualizer.track.on('finish', () => {
                 map.currentMarker = 2
-                playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
+                playPauseBtn.style.backgroundImage = "url('assets/img/play-icon.svg')";
             })
             break;
         case 2:
             visualizer.track.load('soundvisualizer/final/idea_animated.mp4');
-            playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
+            playPauseBtn.style.backgroundImage = "url('assets/img/play-icon.svg')";
             visualizer.track.on('finish', () => {
                 map.currentMarker = 3
-                playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
+                playPauseBtn.style.backgroundImage = "url('assets/img/play-icon.svg')";
             })
             break;
         case 3:
             visualizer.track.load('soundvisualizer/final/what-is-track.mp4');
-            playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
+            playPauseBtn.style.backgroundImage = "url('assets/img/play-icon.svg')";
             visualizer.track.on('finish', () => {
                 map.currentMarker = 4
-                playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
+                playPauseBtn.style.backgroundImage = "url('assets/img/play-icon.svg')";
             })
             break;
         case 4:
             visualizer.track.load('soundvisualizer/final/added-value.mp4');
-            playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
+            playPauseBtn.style.backgroundImage = "url('assets/img/play-icon.svg')";
             visualizer.track.on('finish', () => {
                 map.currentMarker = 1
-                playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
+                playPauseBtn.style.backgroundImage = "url('assets/img/play-icon.svg')";
             })
             break;
     }

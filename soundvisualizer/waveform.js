@@ -4,94 +4,125 @@ const mediaControls = false
 
 
 const currentWave = document.getElementById('currentWave')
-const playBtn = document.getElementById('playBtn')
-const pauseBtn = document.getElementById('pauseBtn')
-const skip1 = document.getElementById('skip1')
-const skip2 = document.getElementById('skip2')
+const playRateBtn = document.getElementById('playRateBtn')
+playRateBtn.value = 1
+const playPauseBtn = document.getElementById('playPauseBtn')
+const muteBtn = document.getElementById('muteBtn')
+// const skip1 = document.getElementById('skip1')
+// const skip2 = document.getElementById('skip2')
 const gps_marker2 = document.getElementById('gps')
 const visualizer = document.getElementById('visualizerContainer')
-console.log(visualizer)
-// const running = gps_marker2.style.animationPlayState === 'running'
 
-playBtn.onclick = () => {
-    console.log(map.currentMarker)
-    visualizer.track.play()
-    videoPlayer.play()
-    switch (map.currentMarker) {
-        case 1:
-            gps_marker2.style.display = 'block'
-            if (gps_marker2.style.animationPlayState === 'paused') {
-                gps_marker2.style.animationPlayState = 'running'
-            } else {
-                gps_marker2.style.animation = `marker1to2 ${visualizer.track.getDuration()}s ease-in-out forwards`
+playPauseBtn.onclick = () => {
+    visualizer.track.playPause()
+    switch (visualizer.track.isPlaying()){
+        case true:
+            videoPlayer.play()
+            playPauseBtn.style.backgroundImage = 'url("/assets/img/pause-icon.svg")';
+            switch (map.currentMarker) {
+                case 1:
+                    gps_marker2.style.display = 'block'
+                    gps_markerSmall.style.display = 'block'
+                    if (gps_marker2.style.animationPlayState === 'paused') {
+                        gps_marker2.style.animationPlayState = 'running'
+                        gps_markerSmall.style.animationPlayState = 'running'
+                    } else {
+                        gps_marker2.style.animation = `marker1to2 ${3+ visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                        gps_markerSmall.style.animation = `marker1to2 ${3 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                    }
+                    break;
+                case 2:
+                    gps_marker2.style.display = 'block'
+                    gps_markerSmall.style.display = 'block'
+                    if (gps_marker2.style.animationPlayState === 'paused') {
+                        gps_marker2.style.animationPlayState = 'running'
+                        gps_markerSmall.style.animationPlayState = 'running'
+                    } else {
+                        gps_marker2.style.animation = `marker2to3 ${3 + visualizer.track.getDuration()}s ease-in-out forwards`
+                        gps_markerSmall.style.animation = `marker2to3 ${3 + visualizer.track.getDuration()}s ease-in-out forwards`
+                    }
+                    break;
+                case 3:
+                    gps_marker2.style.display = 'block'
+                    gps_markerSmall.style.display = 'block'
+                    if (gps_marker2.style.animationPlayState === 'paused') {
+                        gps_marker2.style.animationPlayState = 'running'
+                        gps_markerSmall.style.animationPlayState = 'running'
+                    } else {
+                        gps_marker2.style.animation = `marker3to4 ${3 + visualizer.track.getDuration()}s ease-in-out forwards`
+                        gps_markerSmall.style.animation = `marker3to4 ${3 + visualizer.track.getDuration()}s ease-in-out forwards`
+                    }
+                    break;
+                case 4:
+                    gps_marker2.style.display = 'block'
+                    gps_markerSmall.style.display = 'block'
+                    if (gps_marker2.style.animationPlayState === 'paused') {
+                        gps_marker2.style.animationPlayState = 'running'
+                        gps_markerSmall.style.animationPlayState = 'running'
+                    } else {
+                        gps_marker2.style.animation = `marker4to1 ${3 + visualizer.track.getDuration()}s ease-in-out forwards`
+                        gps_markerSmall.style.animation = `marker4to1 ${3 + visualizer.track.getDuration()}s ease-in-out forwards`
+                    }
+                    break;
             }
             break;
-        case 2:
-            gps_marker2.style.display = 'block'
-            if (gps_marker2.style.animationPlayState === 'paused') {
-                gps_marker2.style.animationPlayState = 'running'
-            } else {
-                gps_marker2.style.animation = `marker2to3 ${visualizer.track.getDuration()}s ease-in-out forwards`
-            }
-            break;
-        case 3:
-            gps_marker2.style.display = 'block'
-            if (gps_marker2.style.animationPlayState === 'paused') {
-                gps_marker2.style.animationPlayState = 'running'
-            } else {
-                gps_marker2.style.animation = `marker3to4 ${visualizer.track.getDuration()}s ease-in-out forwards`
-            }
-            break;
-        case 4:
-            gps_marker2.style.display = 'block'
-            if (gps_marker2.style.animationPlayState === 'paused') {
-                gps_marker2.style.animationPlayState = 'running'
-            } else {
-                gps_marker2.style.animation = `marker4to1 ${visualizer.track.getDuration()}s ease-in-out forwards`
+        case false:
+            videoPlayer.pause()
+            playPauseBtn.style.backgroundImage = 'url("/assets/img/play-icon.svg")';
+            switch (map.currentMarker) {
+                case 1:
+                    gps_marker2.style.display = 'block'
+                    gps_markerSmall.style.display = 'block'
+                    gps_marker2.style.animationPlayState = 'paused'
+                    gps_markerSmall.style.animationPlayState = 'paused'
+                    break;
+                case 2:
+                    gps_marker2.style.display = 'block'
+                    gps_markerSmall.style.display = 'block'
+                    gps_marker2.style.animationPlayState = 'paused'
+                    gps_markerSmall.style.animationPlayState = 'paused'
+                    break;
+                case 3:
+                    gps_marker2.style.display = 'block'
+                    gps_markerSmall.style.display = 'block'
+                    gps_marker2.style.animationPlayState = 'paused'
+                    gps_markerSmall.style.animationPlayState = 'paused'
+                    break;
+                case 4:
+                    gps_marker2.style.display = 'block'
+                    gps_markerSmall.style.display = 'block'
+                    gps_marker2.style.animationPlayState = 'paused'
+                    gps_markerSmall.style.animationPlayState = 'paused'
+                    break;
             }
             break;
     }
 }
 
-skip1.onclick = () => {
-    track1.setCurrentTime(13)
-    track1.play()
-    gps_marker2.style.display = 'block'
-    gps_marker2.style.animation = `marker1-1to2 ${visualizer.track1.getDuration() - visualizer.track.getCurrentTime()}s ease-out forwards`
+muteBtn.onclick = () => {
+   visualizer.track.toggleMute()
+    visualizer.track.getMute() ? muteBtn.style.backgroundImage = 'url("/assets/img/mute-icon.svg")' : muteBtn.style.backgroundImage = 'url("/assets/img/unmute-icon.svg")'
 }
 
-skip2.onclick = () => {
-    track1.setCurrentTime(25)
-    track1.play()
-    gps_marker2.style.display = 'block'
-    gps_marker2.style.animation = `marker1-2to2 ${visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-out forwards`
-}
-
-pauseBtn.onclick = () => {
-    visualizer.track.pause()
-    videoPlayer.pause()
-    switch (map.currentMarker) {
-        case 1:
-            gps_marker2.style.display = 'block'
-            gps_marker2.style.animation = `marker1to2 ${visualizer.track.getDuration()}s ease-in-out forwards`
-            gps_marker2.style.animationPlayState = 'paused'
-            break;
-        case 2:
-            gps_marker2.style.display = 'block'
-            gps_marker2.style.animation = `marker2to3 ${visualizer.track.getDuration()}s ease-in-out forwards`
-            gps_marker2.style.animationPlayState = 'paused'
-            break;
-        case 3:
-            gps_marker2.style.display = 'block'
-            gps_marker2.style.animation = `marker3to4 ${visualizer.track.getDuration()}s ease-in-out forwards`
-            gps_marker2.style.animationPlayState = 'paused'
-            break;
-        case 4:
-            gps_marker2.style.display = 'block'
-            gps_marker2.style.animation = `marker4to1 ${visualizer.track.getDuration()}s ease-in-out forwards`
-            gps_marker2.style.animationPlayState = 'paused'
-            break;
+playRateBtn.onclick = () => {
+    if (playRateBtn.value == 1){
+        playRateBtn.style.backgroundImage = 'url("/assets/img/fasterRate-icon.svg")'
+        playRateBtn.value = 1.25
+    } else if (playRateBtn.value == 1.25){
+        playRateBtn.style.backgroundImage = 'url("/assets/img/fastestRate-icon.svg")'
+        playRateBtn.value = 1.5
+    } else if (playRateBtn.value == 1.5) {
+        playRateBtn.style.backgroundImage = 'url("/assets/img/slowestRate-icon.svg")'
+        playRateBtn.value = 0.5
+    } else if (playRateBtn.value == 0.5) {
+        playRateBtn.style.backgroundImage = 'url("/assets/img/slowerRate-icon.svg")'
+        playRateBtn.value = 0.75
+    } else if (playRateBtn.value == 0.75) {
+        playRateBtn.style.backgroundImage = 'url("/assets/img/normalRate-icon.svg")'
+        playRateBtn.value = 1
     }
+    visualizer.track.setPlaybackRate(playRateBtn.value)
+    videoPlayer.playbackRate = playRateBtn.value
 }
 
 visualizer.track = WaveSurfer.create({
@@ -101,48 +132,100 @@ visualizer.track = WaveSurfer.create({
     barHeight: barHeight,
     barWidth: barWidth,
     mediaControls: mediaControls,
-    hideScrollbar: true
+    hideScrollbar: true,
+    responsive: true
 });
-
-visualizer.track.on('seek', () => {
-    console.log('interaction')
-    console.log(visualizer.track.getCurrentTime())
-    videoPlayer.currentTime = visualizer.track.getCurrentTime()
-})
 
 visualizer.loadWave = () => {
     switch (map.currentMarker) {
         case 1:
             visualizer.track.load('soundvisualizer/final/hiking_animated.mp4');
+            playPauseBtn.style.backgroundImage = 'url("/assets/img/play-icon.svg")';
             visualizer.track.on('finish', () => {
-                console.log('fnished')
                 map.currentMarker = 2
-                console.log(map.currentMarker)
+                playPauseBtn.style.backgroundImage = 'url("/assets/img/play-icon.svg")';
             })
             break;
         case 2:
             visualizer.track.load('soundvisualizer/final/idea_animated.mp4');
+            playPauseBtn.style.backgroundImage = 'url("/assets/img/play-icon.svg")';
             visualizer.track.on('finish', () => {
-                console.log('fnished')
                 map.currentMarker = 3
-                console.log(map.currentMarker)
+                playPauseBtn.style.backgroundImage = 'url("/assets/img/play-icon.svg")';
             })
             break;
         case 3:
             visualizer.track.load('soundvisualizer/final/intro_animated.mp4');
+            playPauseBtn.style.backgroundImage = 'url("/assets/img/play-icon.svg")';
             visualizer.track.on('finish', () => {
-                console.log('fnished')
                 map.currentMarker = 4
-                console.log(map.currentMarker)
+                playPauseBtn.style.backgroundImage = 'url("/assets/img/play-icon.svg")';
             })
             break;
         case 4:
             visualizer.track.load('soundvisualizer/final/hiking_animated.mp4');
+            playPauseBtn.style.backgroundImage = 'url("/assets/img/play-icon.svg")';
             visualizer.track.on('finish', () => {
-                console.log('fnished')
                 map.currentMarker = 1
-                console.log(map.currentMarker)
+                playPauseBtn.style.backgroundImage = 'url("/assets/img/play-icon.svg")';
             })
             break;
     }
 }
+
+visualizer.track.on('seek', () => {
+    videoPlayer.currentTime = visualizer.track.getCurrentTime()
+    gps_marker2.style.display = 'block'
+    gps_markerSmall.style.display = 'block'
+    
+    switch (map.currentMarker) {
+        case 1:
+            if (visualizer.track.isPlaying()) {
+                gps_marker2.style.animation = `marker1to2 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_marker2.style.animationPlayState = 'running'
+                
+                gps_markerSmall.style.animation = `marker1to2 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_markerSmall.style.animationPlayState = 'running'
+            } else {
+                gps_marker2.style.animationPlayState = 'paused'
+                gps_markerSmall.style.animationPlayState = 'paused'
+            }
+            break;
+        case 2:
+            if (visualizer.track.isPlaying()) {
+                gps_marker2.style.animation = `marker2to3 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_marker2.style.animationPlayState = 'running'
+                
+                gps_markerSmall.style.animation = `marker2to3 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_markerSmall.style.animationPlayState = 'running'
+            } else {
+                gps_marker2.style.animationPlayState = 'paused'
+                gps_markerSmall.style.animationPlayState = 'paused'
+            }
+            break;
+        case 3:
+            if (visualizer.track.isPlaying()) {
+                gps_marker2.style.animation = `marker3to4 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_marker2.style.animationPlayState = 'running'
+                
+                gps_markerSmall.style.animation = `marker3to4 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_markerSmall.style.animationPlayState = 'running'
+            } else {
+                gps_marker2.style.animationPlayState = 'paused'
+                gps_markerSmall.style.animationPlayState = 'paused'
+            }
+            break;
+        case 4:
+            if (visualizer.track.isPlaying()) {
+                gps_marker2.style.animation = `marker4to1 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_marker2.style.animationPlayState = 'running'
+                
+                gps_markerSmall.style.animation = `marker4to1 ${5 + visualizer.track.getDuration() - visualizer.track.getCurrentTime()}s ease-in-out forwards`
+                gps_markerSmall.style.animationPlayState = 'running'
+            } else {
+                gps_marker2.style.animationPlayState = 'paused'
+                gps_markerSmall.style.animationPlayState = 'paused'
+            }
+            break;
+    }
+})

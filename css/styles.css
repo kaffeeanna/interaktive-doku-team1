@@ -70,6 +70,10 @@ section {
   display: block;
 }
 
+footer {
+  background-color: white;
+}
+
 body {
   margin: 0;
   font-family: "Gill Sans Nova", Arial, sans-serif;
@@ -78,7 +82,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #445957;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -10350,6 +10354,7 @@ a.text-dark:focus {
   }
   body {
     min-width: 992px !important;
+    background-color: #445957;
   }
 
   .container {
@@ -10623,7 +10628,8 @@ header.masthead .masthead-heading {
 }
 
 .map-small {
-  margin-bottom: 100px;
+  margin-bottom: 0;
+  margin-top: 15px;
 }
 
 .icon-2 {

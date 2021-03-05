@@ -618,7 +618,6 @@ marker4Small.addEventListener("click", () => {
 gps_marker.addEventListener("webkitAnimationEnd", () => {
     gps_marker.style.display = 'none'
     gps_markerSmall.style.display = 'none'
-    console.log(map.currentMarker)
     switch (map.currentMarker) {
         case 1:
             svgDoc.getElementById('Pfad_16-2').style.fill = "none"

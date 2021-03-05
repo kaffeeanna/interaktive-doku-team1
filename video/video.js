@@ -25,6 +25,7 @@ videoPlayer.setVideo = () => {
 };
 
 logoAnimated.addEventListener('click', () => {
+  logoAnimated.currentTime = 2
   logoAnimated.play()
 })
 

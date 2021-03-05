@@ -151,6 +151,12 @@ svg g#Marker1 {
   overflow: scroll;
   padding: 5px;
   margin-top: 50px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.textContainer::-webkit-scrollbar {
+  display: none;
 }
 
 #titleDiv {
@@ -169,6 +175,7 @@ svg g#Marker1 {
 
 .controls {
   margin-left: 22%;
+  margin-top: 5%;
 }
 
 .waveform {

@@ -155,7 +155,7 @@ visualizer.loadWave = () => {
             })
             break;
         case 3:
-            visualizer.track.load('soundvisualizer/final/intro_animated.mp4');
+            visualizer.track.load('soundvisualizer/final/what-is-track.mp4');
             playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
             visualizer.track.on('finish', () => {
                 map.currentMarker = 4
@@ -163,7 +163,7 @@ visualizer.loadWave = () => {
             })
             break;
         case 4:
-            visualizer.track.load('soundvisualizer/final/hiking_animated.mp4');
+            visualizer.track.load('soundvisualizer/final/added-value.mp4');
             playPauseBtn.style.backgroundImage = 'url("../assets/img/play-icon.svg")';
             visualizer.track.on('finish', () => {
                 map.currentMarker = 1

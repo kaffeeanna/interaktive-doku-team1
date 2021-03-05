@@ -35,6 +35,10 @@
   border: none;
 } */
 
+#intro-animated {
+  cursor: pointer;
+}
+
 #playPauseBtn {
   position: relative;
   width: 200px;

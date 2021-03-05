@@ -6,7 +6,6 @@ const m4 = {}
 const markerInfo = {}
 markerInfo.header = document.getElementById('titleDiv')
 markerInfo.text = document.getElementById('textDiv')
-console.log(markerInfo)
 
 m1.title = "WANDERN"
 m1.text = `Lange Zeit galt Wandern als ein Alte-Leute-Hobby. Aber das gehört der Vergangenheit an. In der heutigen Zeit – die Zeit des Perfektionismus – stehen wir immer häufiger unter Druck. Privat als auch beruflich.
